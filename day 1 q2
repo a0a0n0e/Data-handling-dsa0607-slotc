@@ -1,0 +1,15 @@
+# Create dataframe
+data <- data.frame(
+  School = c(rep("A", 3), rep("B", 3), rep("C", 3), rep("D", 3)),
+  Grade_Level = rep(c("Grade 1", "Grade 2", "Grade 3"), 4),
+  Number_of_Students = c(25, 30, 20, 22, 28, 18, 20, 25, 15, 28, 32, 24)
+)
+
+# Mosaic plot
+mosaicplot(table(data$School, data$Grade_Level), main = "Mosaic Plot")
+
+# Histogram plot
+hist(data$Number_of_Students, main = "Histogram of Number of Students")
+
+# Scatter plot
+plot(data$Number_of_Students ~ data$Grade_Level, main = "Scatter plot of Number of Students vs Grade Level")
